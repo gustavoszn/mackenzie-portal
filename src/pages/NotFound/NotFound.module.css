@@ -1,0 +1,28 @@
+.page {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  min-height: 60vh; gap: 12px; text-align: center; padding: 24px;
+}
+.logo {
+  width: 64px; height: 64px;
+  background: var(--mackenzie-red);
+  color: #fff;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 900; font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+.code { font-size: 4rem; font-weight: 900; color: var(--mackenzie-red); line-height: 1; }
+.message { font-size: 1.2rem; font-weight: 700; color: var(--text-primary); }
+.sub { font-size: 0.875rem; color: var(--text-secondary); max-width: 320px; }
+.btn {
+  margin-top: 8px;
+  padding: 10px 24px;
+  background: var(--teal);
+  color: #fff;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  font-size: 0.875rem;
+  transition: background var(--transition);
+  text-decoration: none;
+}
+.btn:hover { background: var(--teal-dark); text-decoration: none; }

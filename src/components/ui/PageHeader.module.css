@@ -1,0 +1,12 @@
+.header { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; }
+.copy { min-width: 0; }
+.eyebrow { display: block; margin-bottom: 4px; color: var(--mackenzie-red); font-size: .75rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.title { color: var(--text-primary); font-size: clamp(1.6rem, 2.2vw, 2rem); font-weight: 750; letter-spacing: -.025em; line-height: 1.2; }
+.description { max-width: 680px; margin-top: 8px; color: var(--text-secondary); font-size: .9rem; }
+.actions { display: flex; align-items: center; justify-content: flex-end; gap: 8px; flex-wrap: wrap; }
+@media (max-width: 640px) {
+  .header { align-items: stretch; flex-direction: column; gap: 16px; }
+  .title { font-size: 1.5rem; }
+  .description { font-size: .875rem; }
+  .actions { justify-content: flex-start; }
+}

@@ -1,0 +1,132 @@
+.header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--header-height);
+  background: var(--mackenzie-red-dark);
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  gap: 16px;
+  z-index: 200;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.16);
+}
+
+.left { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+
+.menuBtn {
+  display: flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px;
+  border-radius: var(--radius-sm);
+  color: rgba(255,255,255,0.85);
+  transition: background var(--transition);
+}
+.menuBtn:hover { background: rgba(255,255,255,0.12); color: #fff; }
+
+.brand { display: flex; align-items: center; gap: 8px; }
+
+.logo {
+  width: 32px; height: 32px;
+  background: #fff;
+  color: var(--mackenzie-red);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 900;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.brandCopy { display: flex; flex-direction: column; line-height: 1.1; }
+.brandCopy strong { color: #fff; font-size: .78rem; letter-spacing: .04em; text-transform: uppercase; }
+.brandCopy span { margin-top: 2px; color: rgba(255,255,255,.68); font-size: .64rem; }
+
+.center {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  min-width: 0;
+}
+
+.courseName {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.conceptBadge {
+  padding: 3px 8px;
+  border: 1px solid rgba(255,255,255,.3);
+  border-radius: 999px;
+  color: rgba(255,255,255,.78);
+  font-size: .61rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.changeBtn {
+  display: flex; align-items: center; gap: 4px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255,255,255,0.2);
+  white-space: nowrap;
+  transition: all var(--transition);
+  flex-shrink: 0;
+}
+.changeBtn:hover { background: rgba(255,255,255,0.12); color: #fff; border-color: rgba(255,255,255,0.4); }
+
+.right { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+
+.iconBtn {
+  display: flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px;
+  border-radius: var(--radius-sm);
+  color: rgba(255,255,255,0.8);
+  transition: background var(--transition);
+}
+.iconBtn:hover { background: rgba(255,255,255,0.12); color: #fff; }
+
+.user {
+  display: flex; align-items: center; gap: 8px;
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background var(--transition);
+}
+.user:hover { background: rgba(255,255,255,0.1); }
+
+.avatar {
+  width: 32px; height: 32px;
+  background: rgba(255,255,255,0.2);
+  border: 2px solid rgba(255,255,255,0.4);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.userInfo { display: flex; flex-direction: column; }
+.userName { font-size: 0.78rem; font-weight: 600; color: #fff; line-height: 1.2; }
+.userRa { font-size: 0.68rem; color: rgba(255,255,255,0.65); }
+.userChevron { color: rgba(255,255,255,0.6); }
+
+@media (max-width: 768px) {
+  .center { display: none; }
+  .userInfo { display: none; }
+  .userChevron { display: none; }
+  .brandCopy { display: none; }
+}

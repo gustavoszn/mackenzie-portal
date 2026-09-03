@@ -1,0 +1,81 @@
+.page { display: flex; flex-direction: column; gap: 20px; }
+.pageHeader { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.title { font-size: 1.4rem; font-weight: 700; color: var(--text-primary); }
+.period { background: var(--teal-light); color: var(--teal-dark); font-size: 0.78rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; }
+
+.disclaimer {
+  background: var(--warning-bg);
+  border: 1px solid var(--warning);
+  border-radius: var(--radius-md);
+  padding: 10px 14px;
+  font-size: 0.8rem;
+  color: var(--warning);
+}
+
+.currentCard {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.currentHeader {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 0.9rem; font-weight: 700; color: var(--text-primary);
+}
+.currentHeader svg { color: var(--teal); }
+
+.currentBody { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+
+.valueBlock { display: flex; flex-direction: column; gap: 2px; }
+.valueLabel { font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+.value { font-size: 1.6rem; font-weight: 800; color: var(--text-primary); }
+
+.dueBlock { display: flex; align-items: center; gap: 8px; color: var(--text-secondary); }
+.dueBlock svg { color: var(--teal); }
+.dueLabel { display: block; font-size: 0.72rem; color: var(--text-muted); }
+.dueDate { display: block; font-size: 0.9rem; font-weight: 700; color: var(--text-primary); }
+
+.payActions { display: flex; gap: 10px; flex-wrap: wrap; }
+.payBtn {
+  display: flex; align-items: center; gap: 6px;
+  padding: 10px 18px;
+  border-radius: var(--radius-md);
+  font-size: 0.82rem;
+  font-weight: 700;
+  transition: all var(--transition);
+}
+.pix { background: var(--teal); color: #fff; }
+.pix:hover { background: var(--teal-dark); }
+.card { background: var(--surface-secondary); color: var(--text-primary); border: 1px solid var(--border); }
+.card:hover { background: var(--surface-hover); }
+.boleto { background: var(--surface-secondary); color: var(--text-primary); border: 1px solid var(--border); }
+.boleto:hover { background: var(--surface-hover); }
+
+.demoNote { font-size: 0.7rem; font-weight: 700; color: var(--danger); text-align: center; letter-spacing: 0.05em; }
+
+.section { display: flex; flex-direction: column; gap: 12px; }
+.sectionTitle { font-size: 0.95rem; font-weight: 700; color: var(--text-primary); }
+
+.historyList { display: flex; flex-direction: column; gap: 8px; }
+.historyItem {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.historyLeft { display: flex; align-items: center; gap: 12px; }
+.iconPaid { color: var(--success); }
+.iconPending { color: var(--warning); }
+.historyMonth { font-size: 0.875rem; font-weight: 600; color: var(--text-primary); }
+.historyDue { font-size: 0.75rem; color: var(--text-muted); }
+.historyRight { display: flex; align-items: center; gap: 12px; }
+.historyValue { font-size: 0.9rem; font-weight: 700; color: var(--text-primary); }

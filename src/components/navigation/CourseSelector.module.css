@@ -1,0 +1,14 @@
+.list { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+.item {
+  width: 100%;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 14px;
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  text-align: left;
+  transition: background var(--transition);
+}
+.item:hover { background: var(--surface-secondary); }
+.active { background: var(--teal-light); color: var(--teal-dark); font-weight: 600; }
+.active:hover { background: var(--teal-light); }

@@ -1,0 +1,122 @@
+.page { display: flex; flex-direction: column; gap: 32px; }
+
+.welcome {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.greeting { font-size: 1.5rem; font-weight: 700; color: var(--text-primary); }
+.sub { font-size: 0.875rem; color: var(--text-secondary); margin-top: 2px; }
+
+.courseBtn {
+  display: flex; align-items: center; gap: 6px;
+  padding: 8px 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--teal-dark);
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+.courseBtn:hover { border-color: var(--teal); background: var(--teal-light); }
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  overflow: hidden;
+  gap: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+}
+
+.statLink { text-decoration: none; display: block; }
+.statLink:hover .statCard { background: #f8fbfb; }
+
+.statCard {
+  background: var(--surface);
+  min-height: 92px;
+  border-right: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  transition: all var(--transition);
+}
+
+.statIcon {
+  width: 42px; height: 42px;
+  border-radius: var(--radius-md);
+  background: var(--surface-secondary);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--teal);
+  flex-shrink: 0;
+}
+
+.statCard.teal .statIcon { background: var(--teal-light); color: var(--teal-dark); }
+.statCard.success .statIcon { background: var(--success-bg); color: var(--success); }
+.statCard.warning .statIcon { background: var(--warning-bg); color: var(--warning); }
+.statCard.danger .statIcon { background: var(--danger-bg); color: var(--danger); }
+
+.statBody { flex: 1; min-width: 0; }
+.statLabel { display: block; font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); }
+.statValue { display: block; font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.statSub { display: block; font-size: 0.75rem; color: var(--text-secondary); margin-top: 1px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.statArrow { color: var(--text-muted); flex-shrink: 0; }
+
+.section { display: flex; flex-direction: column; gap: 12px; }
+.sectionTitle { font-size: 1rem; font-weight: 750; color: var(--text-primary); }
+
+.shortcuts {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 10px;
+}
+
+.shortcut {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 8px;
+  padding: 16px 8px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  color: var(--teal-dark);
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-align: center;
+  transition: all var(--transition);
+  text-decoration: none;
+}
+.shortcut:hover { border-color: var(--teal); background: var(--teal-light); text-decoration: none; }
+
+.subjectList { display: flex; flex-direction: column; overflow: hidden; border: 1px solid var(--border); border-radius: var(--radius-lg); background: var(--surface); }
+.subjectItem {
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.subjectItem + .subjectItem { border-top: 1px solid var(--border-light); }
+.subjectItem:hover { background: #fafbfb; }
+.subjectName { font-size: 0.875rem; font-weight: 600; color: var(--text-primary); }
+.subjectMeta { display: flex; gap: 12px; font-size: 0.78rem; color: var(--text-secondary); }
+.absWarn { color: var(--warning); font-weight: 600; }
+.absOk { color: var(--success); }
+
+@media (max-width: 480px) {
+  .statsGrid { grid-template-columns: 1fr; }
+  .shortcuts { grid-template-columns: repeat(3, 1fr); }
+  .greeting { font-size: 1.25rem; }
+}
+
+@media (min-width: 481px) and (max-width: 1050px) {
+  .statsGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}

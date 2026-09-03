@@ -1,0 +1,72 @@
+.page { display: flex; flex-direction: column; gap: 20px; }
+.title { font-size: 1.4rem; font-weight: 700; color: var(--text-primary); }
+
+.tabs { display: flex; gap: 0; border-bottom: 2px solid var(--border); }
+.tab {
+  padding: 10px 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition: all var(--transition);
+}
+.tab:hover { color: var(--teal); }
+.tabActive { color: var(--teal); border-bottom-color: var(--teal); }
+
+.searchBar {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.searchIcon { position: absolute; left: 12px; color: var(--text-muted); pointer-events: none; }
+.searchInput {
+  width: 100%;
+  padding: 10px 12px 10px 38px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  background: var(--surface);
+  color: var(--text-primary);
+  transition: border-color var(--transition);
+}
+.searchInput:focus { outline: none; border-color: var(--teal); }
+
+.list { display: flex; flex-direction: column; gap: 8px; }
+
+.item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  transition: border-color var(--transition);
+}
+.item:hover { border-color: var(--teal); }
+
+.itemLeft { display: flex; align-items: flex-start; gap: 10px; flex: 1; min-width: 0; }
+.itemIcon { color: var(--teal); flex-shrink: 0; margin-top: 2px; }
+.itemType { font-size: 0.875rem; font-weight: 600; color: var(--text-primary); }
+.itemGroup { font-size: 0.75rem; color: var(--text-muted); margin-top: 2px; }
+
+.itemRight { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+.itemValue { font-size: 0.8rem; font-weight: 600; color: var(--text-secondary); white-space: nowrap; }
+
+.detailBtn {
+  display: flex; align-items: center; gap: 4px;
+  padding: 6px 12px;
+  background: var(--teal);
+  color: #fff;
+  border-radius: var(--radius-sm);
+  font-size: 0.78rem;
+  font-weight: 600;
+  transition: background var(--transition);
+  white-space: nowrap;
+}
+.detailBtn:hover { background: var(--teal-dark); }
+
+.empty { text-align: center; padding: 32px; color: var(--text-muted); font-size: 0.875rem; }

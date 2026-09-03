@@ -1,0 +1,84 @@
+.page { display: flex; flex-direction: column; gap: 24px; min-width: 0; }
+.todayButton, .periodButton { min-height: 44px; border: 1px solid var(--border); border-radius: var(--radius-md); background: var(--surface); color: var(--text-primary); transition: border-color var(--transition), background var(--transition); }
+.todayButton { display: flex; align-items: center; gap: 8px; padding: 0 16px; font-size: .84rem; font-weight: 700; }
+.todayButton svg { color: var(--mackenzie-red); }
+.periodButton { display: flex; align-items: center; gap: 16px; padding: 6px 12px 6px 14px; text-align: left; }
+.periodButton span { display: flex; flex-direction: column; font-size: .86rem; font-weight: 700; line-height: 1.25; }
+.periodButton small { color: var(--text-muted); font-size: .65rem; font-weight: 600; text-transform: uppercase; }
+.todayButton:hover, .periodButton:hover { border-color: var(--teal); background: var(--teal-light); }
+.weekPanel { overflow: hidden; border: 1px solid var(--border); border-radius: var(--radius-lg); background: var(--surface); }
+.weekHeader, .weekRow { display: grid; grid-template-columns: 88px repeat(5, minmax(0, 1fr)); }
+.weekHeader { min-height: 64px; border-bottom: 1px solid var(--border); background: #f7f8f9; }
+.timeHeading, .dayHeading { display: flex; align-items: center; justify-content: center; }
+.timeHeading { color: var(--text-muted); font-size: .68rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.dayHeading { position: relative; flex-direction: column; border-left: 1px solid var(--border-light); color: var(--text-primary); }
+.dayHeading span { font-size: .8rem; font-weight: 800; letter-spacing: .06em; }
+.dayHeading small { margin-top: 1px; color: var(--text-muted); font-size: .68rem; }
+.dayHeading em { position: absolute; right: 8px; top: 7px; color: var(--teal-dark); font-size: .58rem; font-style: normal; font-weight: 800; }
+.todayHeading::after { position: absolute; bottom: 0; left: 20%; right: 20%; height: 3px; border-radius: 3px 3px 0 0; background: var(--teal); content: ''; }
+.weekRow { min-height: 148px; }
+.weekRow + .weekRow { border-top: 1px solid var(--border); }
+.timeSlot { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: #fafafa; }
+.timeSlot strong { color: var(--text-primary); font-size: .84rem; }
+.timeSlot span { color: var(--text-muted); font-size: .72rem; }
+.daySlot { display: flex; min-width: 0; padding: 10px; border-left: 1px solid var(--border-light); }
+.freeSlot { margin: auto; color: #d4d8dd; }
+.classCard { position: relative; display: flex; width: 100%; min-width: 0; overflow: hidden; border: 1px solid var(--border); border-radius: 10px; background: var(--surface); }
+.classCardCompact { background: #fbfcfc; }
+.classAccent { width: 4px; flex: 0 0 4px; background: var(--teal); }
+.classContent { min-width: 0; padding: 14px; }
+.classContent h3 { color: var(--text-primary); font-size: .88rem; font-weight: 750; line-height: 1.35; }
+.primaryMeta, .secondaryMeta { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; }
+.primaryMeta { margin-top: 10px; }
+.secondaryMeta { margin-top: 7px; }
+.primaryMeta span, .secondaryMeta span { display: inline-flex; align-items: center; min-width: 0; gap: 5px; color: var(--text-secondary); font-size: .72rem; line-height: 1.35; }
+.primaryMeta span { font-weight: 650; }
+.primaryMeta svg, .secondaryMeta svg { flex: 0 0 auto; color: var(--teal); }
+.secondaryMeta .mode { width: fit-content; border-radius: 999px; background: var(--teal-light); color: var(--teal-dark); padding: 3px 7px; font-size: .66rem; font-weight: 750; }
+.mobileSchedule { display: none; }
+@media (max-width: 1180px) {
+  .weekHeader, .weekRow { grid-template-columns: 72px repeat(5, minmax(0, 1fr)); }
+  .daySlot { padding: 8px; }
+  .classContent { padding: 11px; }
+  .classContent h3 { font-size: .8rem; }
+  .secondaryMeta span { font-size: .68rem; }
+}
+@media (max-width: 900px) {
+  .weekPanel { display: none; }
+  .mobileSchedule { display: block; }
+  .mobileDate { margin-bottom: 12px; color: var(--text-primary); font-size: 1rem; font-weight: 750; }
+  .mobileDate span { color: var(--teal-dark); }
+  .daySelector { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 4px; margin-bottom: 24px; padding: 4px; border: 1px solid var(--border); border-radius: 10px; background: var(--surface); }
+  .dayButton { position: relative; min-width: 0; min-height: 44px; border-radius: 7px; color: var(--text-secondary); font-size: .72rem; font-weight: 800; letter-spacing: .04em; }
+  .dayButton:hover { background: var(--surface-secondary); }
+  .dayButtonActive { background: var(--teal); color: #fff; }
+  .dayButtonActive:hover { background: var(--teal-dark); }
+  .dayButton i { position: absolute; left: 50%; bottom: 5px; width: 3px; height: 3px; border-radius: 50%; background: currentColor; transform: translateX(-50%); }
+  .timeline { display: flex; flex-direction: column; }
+  .timelineItem { display: grid; grid-template-columns: 48px 18px minmax(0, 1fr); min-width: 0; }
+  .timelineItem:not(:last-child) { padding-bottom: 16px; }
+  .timelineTime { display: flex; flex-direction: column; padding-top: 14px; }
+  .timelineTime strong { color: var(--text-primary); font-size: .75rem; }
+  .timelineTime span { margin-top: 2px; color: var(--text-muted); font-size: .66rem; }
+  .timelineRail { position: relative; display: flex; justify-content: center; }
+  .timelineRail::after { position: absolute; top: 22px; bottom: -16px; width: 1px; background: var(--border); content: ''; }
+  .timelineItem:last-child .timelineRail::after { display: none; }
+  .timelineRail i { z-index: 1; width: 9px; height: 9px; margin-top: 19px; border: 2px solid var(--surface); border-radius: 50%; background: var(--teal); box-shadow: 0 0 0 2px var(--teal-light); }
+  .classContent { padding: 14px; }
+  .classContent h3 { font-size: .9rem; }
+  .emptyWrap { border: 1px solid var(--border); border-radius: var(--radius-lg); background: var(--surface); }
+}
+@media (max-width: 480px) {
+  .page { gap: 20px; }
+  .todayButton { display: none; }
+  .periodButton { width: 100%; justify-content: space-between; }
+  .timelineItem { grid-template-columns: 44px 14px minmax(0, 1fr); }
+  .classContent { padding: 12px; }
+  .primaryMeta, .secondaryMeta { align-items: flex-start; flex-direction: column; gap: 5px; }
+}
+@media (max-width: 340px) {
+  .daySelector { gap: 2px; padding: 3px; }
+  .dayButton { font-size: .67rem; }
+  .timelineItem { grid-template-columns: 41px 12px minmax(0, 1fr); }
+  .classContent { padding: 10px; }
+}

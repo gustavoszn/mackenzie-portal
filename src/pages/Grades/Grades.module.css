@@ -1,0 +1,47 @@
+.page { display: flex; flex-direction: column; gap: 20px; }
+.pageHeader { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.title { font-size: 1.4rem; font-weight: 700; color: var(--text-primary); }
+.period { background: var(--teal-light); color: var(--teal-dark); font-size: 0.78rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; }
+
+.list { display: flex; flex-direction: column; gap: 12px; }
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.cardHeader { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.subjectName { font-size: 0.9rem; font-weight: 700; color: var(--text-primary); }
+.subjectCode { font-size: 0.72rem; color: var(--text-muted); margin-top: 2px; }
+
+.grades {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.gradeItem {
+  background: var(--surface-secondary);
+  border-radius: var(--radius-md);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.mediaItem { background: var(--teal-light); }
+
+.gradeLabel { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); }
+.gradeValue { font-size: 1.1rem; font-weight: 800; color: var(--text-primary); }
+.pass { color: var(--success); }
+.fail { color: var(--danger); }
+
+@media (max-width: 360px) {
+  .grades { grid-template-columns: repeat(2, 1fr); }
+}

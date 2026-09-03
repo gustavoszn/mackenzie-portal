@@ -1,0 +1,26 @@
+.accordion { border: 1px solid var(--border); border-radius: var(--radius-md); overflow: hidden; }
+.trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background: var(--surface-secondary);
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: left;
+  transition: background var(--transition);
+}
+.trigger:hover { background: var(--surface-hover); }
+.icon { color: var(--teal); flex-shrink: 0; }
+.title { flex: 1; }
+.badge {
+  background: var(--teal);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 20px;
+}
+.content { padding: 0; }
